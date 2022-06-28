@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"plugins": [{ "name": "typescript-plugin-css-modules" }],
+		"allowJs": false,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": false,
+		"forceConsistentCasingInFileNames": true,
+		"alwaysStrict": false,
+		"keyofStringsOnly": true,
+		"noImplicitAny": false,
+		"noStrictGenericChecks": true,
+		"skipDefaultLibCheck": true,
+		"suppressExcessPropertyErrors": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+		"checkJs": false,
+		"esModuleInterop": true,
+		"outDir": "modules",
+		"isolatedModules": true,
+		"types": ["node"],
+		"noFallthroughCasesInSwitch": true
+	},
+	"include": ["src"],
+	"exclude": ["**/node_modules", "node_modules", "node_modules/**/*.*", "**/__tests__", "**/*.spec.*", "cypress"]
+}

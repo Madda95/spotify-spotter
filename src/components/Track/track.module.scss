@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+
+.card {
+    width: 100%;
+    height: auto;
+    padding: 0.8rem;
+    margin: 0 2rem 2rem 0;
+    border: 0.1rem solid $green;
+    background: rgba($green, 0.3);
+
+    .track {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        
+        .trackName {
+            text-transform: uppercase;
+            text-decoration: none;
+            max-width: 30rem;
+            margin-left: 3rem;
+            color: $white;
+        }
+        
+        .time {
+            color: $white;
+            margin-left: 3rem;
+        }
+
+        .artistName {
+            color: $white;
+            margin-left: 3rem;
+            text-decoration: unset;
+        }
+
+        img {
+            width: 7rem;
+            height: 7rem;
+            background-size: cover;
+            border-radius: 0.3rem;
+        }
+        
+        div {
+            color: $white;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-left: 0.5rem;
+        }
+    }
+}
