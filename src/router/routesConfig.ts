@@ -27,16 +27,4 @@ export const ALL_ROUTES: RouteConfig[] = [
         exact: true,
         withWrapper: true,
     },
-    {
-        path: AVAILABLE_PATHS.ARTIST,
-        content: null,
-        exact: false,
-        withWrapper: false,
-    },
-    {
-        path: AVAILABLE_PATHS.SONG,
-        content: null,
-        exact: false,
-        withWrapper: false,
-    },
 ];

@@ -9,7 +9,6 @@ import { ISpotifyTrackDto } from "../../api/Spotify/models/ISpotifyTrackDto";
 const getSearch = createAsyncThunk<
     {
         data: {
-            artists: any;
             tracks: ISpotifyObjectResponse<ISpotifyTrackDto>;
         };
     },
@@ -31,7 +30,7 @@ export const spotifyExtraReducer = (
         state.loading = false;
         state.data.tracks = action.payload.data.tracks;
     });
-    builder.addCase(getSearch.rejected, (state, payload) => {
+    builder.addCase(getSearch.rejected, (state) => {
         state.loading = false;
         state.data = null;
     });

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { AVAILABLE_PATHS } from "../../constants";
 

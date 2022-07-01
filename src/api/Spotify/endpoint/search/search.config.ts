@@ -8,11 +8,4 @@ export const SpotifySearchConfig: { [key: string]: IRequestsConfig } = {
         path: () => `search`,
         queryString: (p: ISpotifySearchRequestDto) => composeQuery(p),
     },
-    // track: {
-    //     method: "get",
-    //     path: () => `search`,
-    //     queryString: (p: ISpotifySearchRequestDto) => composeQuery(p),
-    // },
 } as const;
-
-export {};

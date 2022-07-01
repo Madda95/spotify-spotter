@@ -1,4 +1,4 @@
-import { CircularProgress, Select, Typography } from "@mui/material";
+import { CircularProgress, Typography } from "@mui/material";
 import React, { useCallback } from "react";
 import { useSelector } from "react-redux";
 import Searchbar from "../../components/SearchBar/Searchbar.component";
@@ -7,11 +7,14 @@ import { SEARCH_LABELS } from "../../constants/lables";
 import { useSpotify } from "../../hooks/useSpotify";
 import { IGlobalState } from "../../store";
 import styles from "./search.module.scss";
+import MusicOffIcon from "@mui/icons-material/MusicOff";
 
 const SearchComponent: React.FC = () => {
     const { search } = useSpotify();
-    const { tracks } = useSelector((state: IGlobalState) => state.spotify.data);
-    const { loading } = useSelector((state: IGlobalState) => state.spotify);
+    const tracks = useSelector(
+        (state: IGlobalState) => state.spotify.data?.tracks
+    );
+    const loading = useSelector((state: IGlobalState) => state.spotify.loading);
 
     const performSearch = useCallback(
         (value: string) => {
@@ -35,10 +38,8 @@ const SearchComponent: React.FC = () => {
                 buttonCta="Cerca"
                 onSearch={performSearch}
             />
-
             {loading && <CircularProgress className={styles.loader} />}
-
-            {tracks != null && (
+            {tracks != null ? (
                 <div>
                     <Typography variant="h4" mt={2} mb={2} color="white">
                         {tracks.items.length > 0
@@ -52,7 +53,7 @@ const SearchComponent: React.FC = () => {
                                     album_uri={album.uri}
                                     album_image={album.images[0]?.url}
                                     artist_name={artists?.[0].name}
-                                    artist_id={artists?.[0].id}
+                                    artist_uri={artists?.[0].uri}
                                     duration_ms={duration_ms}
                                     track_name={name}
                                     track_uri={uri}
@@ -61,6 +62,15 @@ const SearchComponent: React.FC = () => {
                         )}
                     </div>
                 </div>
+            ) : (
+                !loading && (
+                    <div className={styles.empty}>
+                        <MusicOffIcon
+                            color="primary"
+                            className={styles.iconEmpty}
+                        />
+                    </div>
+                )
             )}
         </div>
     );

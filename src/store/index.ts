@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import combinedReducers from "./root.reducer";
-import { authorizationMiddlewere } from "./middlewere/authorization.middlewere";
+import { authorizationMiddlewere } from "./middlewares/authorization.middleware";
 import { ISpotifyState } from "./spotify/spotiy.state";
+import { INorificationState } from "./notification/notification.state";
 
 export interface IGlobalState {
     spotify: ISpotifyState;
+    notification: INorificationState;
 }
 
 export const store = configureStore({

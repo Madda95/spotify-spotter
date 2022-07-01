@@ -1,6 +1,7 @@
 export enum AVAILABLE_PATHS {
     LOGIN = "/login",
     HOME = "/",
-    ARTIST = "/artits/:id",
-    SONG = "/song/:id",
 }
+
+
+export const REDIRECT_TIMEOUT = 3000;

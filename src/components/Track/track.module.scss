@@ -4,9 +4,10 @@
     width: 100%;
     height: auto;
     padding: 0.8rem;
-    margin: 0 2rem 2rem 0;
+    margin: 0 0 2rem 0;
+    border-radius: .6rem;
     border: 0.1rem solid $green;
-    background: rgba($green, 0.3);
+    background-color: rgba($green, 0.3);
 
     .track {
         display: flex;
@@ -16,20 +17,17 @@
         .trackName {
             text-transform: uppercase;
             text-decoration: none;
-            max-width: 30rem;
+            max-width: 40rem;
             margin-left: 3rem;
             color: $white;
         }
         
-        .time {
-            color: $white;
-            margin-left: 3rem;
-        }
-
         .artistName {
             color: $white;
             margin-left: 3rem;
             text-decoration: unset;
+            margin-left: auto;
+            margin-right: 3rem;
         }
 
         img {

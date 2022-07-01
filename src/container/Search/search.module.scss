@@ -5,16 +5,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    justify-content: start;
+    justify-content: flex-start;
     padding: 3rem 2rem;
-    margin: 5rem auto;
+    margin-top: 5rem;
     box-shadow: 0 0.5rem 2rem rgba($black, 0.3);
     border-radius: 0.6rem;
     background: $black;
-    min-height: 20rem;
 
     .loader {
-        margin: 3rem auto;
+        margin: 3rem auto 0 auto;
     }
 
     h2 {
@@ -28,6 +27,18 @@
     .cardContainer {
         display: flex;
         flex-wrap: wrap;
-        justify-content: start;
+        justify-content: flex-start;
+    }
+
+    .empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        width: 100%;
+
+        .iconEmpty {
+            font-size: 3.6rem;
+        }
     }
 }

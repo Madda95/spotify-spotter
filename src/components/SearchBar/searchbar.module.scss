@@ -17,12 +17,19 @@
         height: 30px;
         padding: 0 0.6rem;
         background: $white;
-
-
+        
+        &::placeholder {
+            font-size: 1.4rem;
+        }
     }
 
     .button {
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
+
+        &[class*="Mui-disabled"] {
+            background-color: rgba($green, 0.5);
+            color: white;
+        }
     }
 }

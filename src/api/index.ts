@@ -11,7 +11,9 @@ type AxiosParameters<P> = {
     responseType: ResponseType;
     payload?: P;
     options?: Partial<AxiosRequestConfig>;
-    headers?: any;
+    headers?: {
+        Authorization: string;
+    };
 };
 
 export async function axiosClient<T, P = unknown>(
